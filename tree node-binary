@@ -1,0 +1,23 @@
+Def for a binary tree node
+function Node(val, left, right) { 
+this val = (val ===undefined ? 0 : val) 
+this left = (left===undefined ? null : left) 
+this right = (right===undefined ? null : right)
+
+}
+/
+//print node values 
+const dfs = (node, result) => { 
+   if (node.left) { 
+    dfs(node.left,result);
+} 
+
+if (node.right){ 
+    dfs(node.right); 
+}
+
+    result.push(node.val);
+    return result;
+}
+
+//binary tree traversal
